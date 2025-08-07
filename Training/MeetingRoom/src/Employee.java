@@ -5,6 +5,7 @@ public class Employee {
     String name;
 
     Employee(int id, String name) {
-        // this.
+        this.id = id;
+        this.name = name;
     }
 }

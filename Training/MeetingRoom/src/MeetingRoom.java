@@ -11,13 +11,13 @@ public class MeetingRoom {
     HashSet<LocalDate> bookingDates = new HashSet<>();
     HashSet<Booking> bookings = new HashSet<>();
 
-    MeetingRoom(int id, int adminId, String name) {
+    public MeetingRoom(int id, int adminId, String name) {
         this.id = id;
         this.createdBy = adminId;
         this.name = name;
     }
 
-    String bookMeetingRoom(int employeeId, LocalDate bookingDate) {
+    public String bookMeetingRoom(int employeeId, LocalDate bookingDate) {
         if (!active || bookingDates.contains(bookingDate)) {
             return "Booking failed for meeting room ID: " + this.id;
         } else {
@@ -28,17 +28,17 @@ public class MeetingRoom {
         }
     }
 
-    String activateMeetingRoom() {
+    public String activateMeetingRoom() {
         this.active = true;
         return "Activated meeting room ID: " + this.id;
     }
 
-    String deactivateMeetingRoom() {
+    public String deactivateMeetingRoom() {
         this.active = false;
         return "Deactivated meeting room ID: " + this.id;
     }
 
-    HashSet<Booking> displayBookings() {
+    public HashSet<Booking> displayBookings() {
         return bookings;
     }
 }
