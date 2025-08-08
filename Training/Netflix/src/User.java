@@ -5,8 +5,8 @@ import java.util.HashSet;
 public class User {
     private String username;
     private String password;
-    private HashSet<Rating<Object>> ratings = new HashSet<>();
-    private HashSet<String> watchlist = new HashSet<>();
+    private HashSet<RatingBase> ratings = new HashSet<>();
+    private HashSet<Movie> watchlist = new HashSet<>();
 
     User(String username, String password) {
         this.username = username;
@@ -17,7 +17,11 @@ public class User {
         return this.username;
     }
 
-    public void addToWatchlist(String title) {
-        this.watchlist.add(title);
+    public void addToWatchlist(Movie item) {
+        this.watchlist.add(item);
+    }
+
+    public void addRating(RatingBase rating) {
+        ratings.add(rating);
     }
 }

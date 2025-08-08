@@ -10,8 +10,7 @@ public class TVShow extends Movie {
         super(title, genre, releaseYear, duration);
     }
 
-    public String createEpisode(String title, int episodeNumber, String duration) {
-        new Episode(title, episodeNumber, duration);
-        return "Episode created successfully.";
+    public Episode createEpisode(String title, int episodeNumber, String duration) {
+        return new Episode(title, episodeNumber, duration);
     }
 }

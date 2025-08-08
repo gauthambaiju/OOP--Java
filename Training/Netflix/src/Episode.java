@@ -7,7 +7,7 @@ public class Episode {
     int episodeNumber;
     String duration;
     HashSet<Rating<Episode>> ratings = new HashSet<>();
-    Double averageRating;
+    Double averageRating = 0.0;
 
     Episode(String title, int episodeNumber, String duration) {
         this.title = title;

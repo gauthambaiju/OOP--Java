@@ -20,4 +20,8 @@ public class MovieHandler {
         }
         return null;
     }
+
+    public static HashSet<Movie> getAllMovies() {
+        return movies;
+    }
 }
