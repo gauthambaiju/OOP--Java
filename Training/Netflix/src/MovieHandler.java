@@ -14,7 +14,7 @@ public class MovieHandler {
 
     public static Movie searchMovie(String title) {
         for (Movie movie : movies) {
-            if (movie.title == title) {
+            if (movie.title.contains(title)) {
                 return movie;
             }
         }
